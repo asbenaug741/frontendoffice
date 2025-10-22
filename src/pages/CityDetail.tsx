@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import type { City } from "../types/type";
 import axios from "axios";
 import OfficeCard from "../components/OfficeCard";
 
 export default function CityDetail(){
+
+    const baseURL = 'http://backendoffice.test/storage';
 
     const {slug} = useParams<{slug: string}>();
     
@@ -52,7 +54,9 @@ export default function CityDetail(){
                 </a>
                 <ul className="flex items-center gap-[50px] w-fit">
                     <li>
-                    <a href="">Browse</a>
+                    <Link to="/">
+                        <a href="">Browse</a>
+                    </Link>
                     </li>
                     <li>
                     <a href="">Popular</a>
@@ -88,7 +92,7 @@ export default function CityDetail(){
                 >
                     <h1 className="font-extrabold text-[50px] leading-[60px]">
                     Great Office in <br />{" "}
-                    <span className="text-[#0D903A]">Jakarta Pusat City</span>
+                    <span className="text-[#0D903A]">{city.name}</span>
                     </h1>
                     <p className="text-lg leading-8 text-[#000929]">
                     Kantor yang tepat dapat memberikan impact pekerjaan menjadi lebih baik
@@ -100,7 +104,7 @@ export default function CityDetail(){
                     className="absolute right-0 w-[calc(100%-((100%-1130px)/2)-305px)] h-[434px] rounded-bl-[40px] overflow-hidden"
                 >
                     <img
-                    src="/assets/images/thumbnails/thumbnail-details-4.png"
+                    src={`${baseURL}/${city.photo}`}
                     className="w-full h-full object-cover"
                     alt="hero background"
                     />

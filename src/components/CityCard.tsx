@@ -9,7 +9,7 @@ export default function CityCard({city}: CityCardProps){
                 <h3 className="font-bold text-xl leading-[30px] text-white">
                 {city.name}
                 </h3>
-                <p className="text-white">{city.officeSpace_count}</p>
+                <p className="text-white">{city.officeSpace_count} office</p>
             </div>
             <img
                 src={`${baseURL}/${city.photo}`}

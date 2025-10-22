@@ -1,17 +1,6 @@
 export default function Details(){
     return (
         <>
-            <meta charSet="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link href="./output.css" rel="stylesheet" />
-            <link
-                href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
-                rel="stylesheet"
-            />
-            <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-            />
             <nav className="bg-white">
                 <div className="flex items-center justify-between w-full max-w-[1130px] py-[22px] mx-auto">
                 <a href="index.html">
@@ -366,7 +355,6 @@ export default function Details(){
                 </div>
                 </div>
             </section>
-            </>
-
+        </>
     );
 }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CityWrapper from "../wrappers/CityWrapper";
 import OfficeWrapper from "../wrappers/OfficeWrapper";
 
@@ -11,7 +12,9 @@ export default function Browse(){
                 </a>
                 <ul className="flex items-center gap-[50px] w-fit">
                     <li>
-                    <a href="">Browse</a>
+                    <Link to="/">
+                        <a href="">Browse</a>
+                    </Link>
                     </li>
                     <li>
                     <a href="">Popular</a>
